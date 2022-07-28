@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Palaquin, sans-serif ;
+}
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    opacity: 1;
+   
+}
+
+.logo{
+    color: yellow;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px  black,
+                 3px 3px red,
+                 4px 4px white;
+
+
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    list-style: none;
+    cursor: pointer;
+    
+
+    
+
+}
+
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    
+
+}
+
+.nav-links a:hover{
+    color: yellow;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: red ;
+    margin: 5px;
+    transition: all 0.3s ease;
+
+}
+.burger {
+    display: none;
+
+}
+
+.sticky{
+    position: fixed;
+    top: 1;
+    width: 100%;
+}
+
+#home{ 
+    background-image: url('../img/Seindenfanden_Logo_Script.jpg');
+    background-size: 2010px;
+    background-position:  center;
+    background-color: black;
+    background-repeat: no-repeat;
+    height: 95vh;
+    max-width: auto;
+    
+   
+
+
+
+}
+
+
+.icons,a {
+    font-size: 30px;
+    background-color:black;
+    color: yellow;
+    align-items: flex-start;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 18px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    
+
+
+
+}
+.icons, a:hover{
+    color: red;
+    cursor: pointer;
+}
+.hours{
+    background-color: azure;
+    align-items: center;
+    text-align: center;
+    padding: 5em;
+    height: 100vh;
+}
+
+.location{
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+    padding: 5em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+}
+    
+    
+
+#story {
+    background-color: blue;
+    height: 120vh;
+}
+#events {
+    background-color:yellow; 
+    height: 100vh;
+}
+#beers {
+    background-color: red;
+    height: 100vh;
+}
+
+/*Tablet*/
+
+@media screen and (max-width:1024px) {
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        list-style: none;
+        
+    
+}
+}
+
+
+/*Mobile*/
+
+@media screen and (max-width:768px) {
+    body{
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+
+
+    
+
+    .nav-links{
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        color: yellow;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        opacity: 90%;
+    }
+
+    .nav-links li {
+        opacity: 1;
+        
+    }
+
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+    #home{
+        background-color: black;
+        background-size:50em;
+    }
+
+    @keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+
+    .xmove .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+
+    .xmove .line2{
+        opacity: 0;
+    }
+
+    .xmove .line3{transform: rotate(45deg) translate(-5px,-6px);
+    }
+
+}
+
+
+
+
+
+    
